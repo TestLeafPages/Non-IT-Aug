@@ -1,0 +1,73 @@
+TestNG:(Test execution framework)
+Is a unit testing framework
+java----Junit
+python-pytest
+.net-NUnit
+TestNG-openSource testing framework.NG-Next generation
+1.Has the feature to perform sequential test execution
+2.Has the feature to perform parallel test execution
+3.Gives test execution status(pass/fail).
+4.Gives text execution summary report(HTML report).
+5.Support data driven-to execute test with multiple set of data
+6.Support cross browser testing
+7.Control the test execution with annotations and attribute
+8.Assertion to perform validation and verification
+9.Automatic retry of falied test case
+Cedric
+software:
+TestNG as plugin(To run as testng xml file)
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>  
+</dependency>
+TestNg as jar
+
+How to convert normal java code to testng code
+-----------------------------------------------
+-Change the main method to normal method
+public void methodName(){
+}
+remove static
+change the main to meaningful test name
+remove the arguments
+2.Add the Annotations(@Test) on top of the method
+How to run multiple testcase through TestNg?
+1.Select the testcase that you like to run together
+2.Convert them as testng---->Convert TestNg
+3.This will generate the testng xml file
+4.click the xml file and open the source tab
+ClassRoom:
+sequential/parallel
+Convert a xml that can run sequential
+convert a xml with parallel-classes
+
+
+
+Attribute
+verbose--log will print inside the console
+default value---2 log
+max-0-10---5 we can mention
+thread count="5"
+
+Annotations Hierarcy:
+@BeforeSuit----Report the initialization
+before running all the testcase in xml file
+      @BeforeTest----Data connection
+	        before running every module 
+			   @BeforeClass---add the information test case to report
+			    before running every java class(author,test,category)
+				      @BeforeMethod---Launching the browser
+					   before running every testcase
+					            @Test(Mandatory)
+
+                      @AfterMethod----Close the browser
+
+               @AfterClass--close
+			   
+	  @AfterTest----close the data connection
+
+@AfterSuit----Ending the report	  
+thread--execution
+
+xml-extensible markup language
