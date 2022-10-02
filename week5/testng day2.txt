@@ -1,0 +1,53 @@
+Learn Attributes:
+priority:
+---------
+1.Priority- will work with in the class
+2.Lower priority will be scheduled first
+3.useful for a developer
+ enabled/@ignore
+ ----------------
+ Whether methods on this class/method are enabled.
+ enabled is at method level
+ @ignore can use at the class level
+Default value-True
+
+3.invocationcount:5   c d e d m 
+the number of times this method should be invoked
+Use:you like to create data  for same information
+
+invocationTimeOut:
+The maximum number of milliseconds this test should take for 
+cumulated time of all the  invocationcount.
+This attribute will be ignore if invocation count is not specified
+Do not use it.
+
+threadPoolSize-3
+The size of the thread pool for this method. The method will be invoked from multiple threads as specified by invocationCount.
+Note: this attribute is ignored if invocationCount is not specified
+4.dependsonMethods
+--------------------
+The list of methods this method depends on.
+delete----depends --->create
+alwaysrun:
+	If set to true, this test method will always be run even if it depends on a method that failed.
+
+
+priority vs dependsonMethods
+priority will work with in the class whereas dom--->across the classes
+priority will run even whenn previous priority fails but dom does not work
+
+Timeout:
+The maxmium number milliseconds this test should complete if not test fail.
+Parameterization:
+-No hard code of data inside the java class
+-preferredd to automate them by passing from external source(excel,xml,json,db)
+ 2 types:
+ ---------
+ -static(parameter)
+ if it is common across multiple testcases then u can keep in xml
+ Example:url,username,password
+ 
+ 
+ -Dynamic(DataProvider)
+ it is specific to testcase.cannot reuse most of them we have in java(excel)
+ Example:company name,firstname,lastname,phonenumber.........
